@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RChatAI 냉동 설계</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header class="top">
+    <div class="title">냉동 설계</div>
+    <div class="grow"></div>
+    <div id="status" class="status"></div>
+    <button id="reset-all" class="txtbtn" type="button"></button>
+  </header>
+  <!-- 대표 11/08 그림: 선택창(위 전체) / 채팅 · 입력 · 시각화 · 결과 네 칸 (11/10 대표 순서) -->
+  <div id="tabsbar" class="tabsbar"></div>
+  <div class="body">
+    <aside id="chat" class="chat">
+      <div id="msgs" class="msgs"></div>
+      <form id="chat-form" class="inputbar">
+        <!-- 첨부 줄 — 라이브 앱과 같은 자리(입력줄 바로 위): 담으면 여기 쌓이고 [보내기]로 함께 나간다 -->
+        <div id="chat-att" class="attrow" hidden></div>
+        <div id="chat-attnote" class="attnote" role="status" hidden></div>
+        <input type="file" id="chat-file" multiple hidden accept="image/*,.pdf,.xlsx,.xls,.xlsm,.csv,.tsv,.txt,.md,.json">
+        <div class="inputpill">
+          <button type="button" id="chat-add" class="pillbtn" aria-label="사진·파일 첨부" title="사진·파일 첨부 (붙여넣기·끌어 놓기도 돼요)" hidden></button>
+          <textarea id="chat-input" rows="1" placeholder="메시지 입력" aria-label="메시지 입력"></textarea>
+          <button type="button" id="chat-mic" class="pillbtn" aria-label="음성으로 입력" hidden></button>
+          <!-- [새 상담] — 마이크 오른쪽(대표 11/10). 대화만 비우고 설계 값은 그대로 -->
+          <button type="button" id="chat-new" class="pillbtn" aria-label="새 상담 시작" title="새 상담" disabled></button>
+          <button type="submit" id="chat-send" class="send" aria-label="보내기" hidden></button>
+        </div>
+      </form>
+    </aside>
+    <div class="gutter" role="separator" aria-orientation="vertical" title="끌어서 폭 조절 · 두 번 누르면 처음 폭"></div>
+    <main id="main" class="main"><div id="view" class="column"></div></main>
+    <div class="gutter" role="separator" aria-orientation="vertical" title="끌어서 폭 조절 · 두 번 누르면 처음 폭"></div>
+    <section id="viz" class="viz" aria-label="시각화"></section>
+    <div class="gutter" role="separator" aria-orientation="vertical" title="끌어서 폭 조절 · 두 번 누르면 처음 폭"></div>
+    <aside id="side" class="side"></aside>
+  </div>
+</div>
+<script src="config.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

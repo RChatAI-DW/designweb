@@ -1,0 +1,1 @@
+window.DW_CFG = {"api":"https://wjlzfknaezwwyusdrdtt.supabase.co/functions/v1/designweb","anon":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndqbHpma25hZXp3d3l1c2RyZHR0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU4MjAwODEsImV4cCI6MjEwMTM5NjA4MX0.q8g2wFBP_ideMcGgtgKeFwwxBdIG7ajpcv6RJxJbO9s"};
